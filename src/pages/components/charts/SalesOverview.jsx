@@ -64,7 +64,7 @@ const SalesOverview = () => {
 
       const { width, height, x, y } = chartArea;
       ctx.save();
-      ctx.font = 'bold 20px Arial'; // Increased font size for visibility
+      ctx.font = 'bold 16px Arial'; // Adjust font size for visibility
       ctx.textAlign = 'center';
       ctx.fillStyle = '#000';
 
@@ -75,7 +75,7 @@ const SalesOverview = () => {
   };
 
   return (
-    <div className="rounded-lg w-full h-full p-2 shadow-md bg-white">
+    <div className="rounded-lg w-full h-[240px] p-2 shadow-md bg-white">
       <div className='flex justify-between items-center mb-4'>
         <h2 className="text-lg font-semibold">Sales Overview</h2>
         <button>
@@ -85,7 +85,7 @@ const SalesOverview = () => {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div className="h-48 md:h-[full] lg:h-[full] ">
+        <div className="h-40 md:h-32 lg:h-40"> {/* Adjusted height here */}
           <Doughnut
             data={data}
             options={{
@@ -101,9 +101,8 @@ const SalesOverview = () => {
           />
         </div>
       )}
-      <div className="mt-4 text-center">
-
-        <p className="text-lg font-bold">Total Amount: <span className="text-xl">${totalAmount.toFixed(2)}</span></p>
+      <div className="left-0 text-gray-600"> {/* Adjusted margin here */}
+        <p className="text-sm font-bold ">TA: <span className="text-sm">${totalAmount.toFixed(2)}</span></p>
       </div>
     </div>
   );

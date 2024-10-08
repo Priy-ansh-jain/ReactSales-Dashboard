@@ -7,11 +7,11 @@ ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 const YearlySalesChart = () => {
   // Sample data for the chart
   const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
     datasets: [
       {
         label: '2023',
-        data: [3000, 4000, 2000, 5000, 6000, 7000, 5000, 8000, 10000, 12000, 15000, 13000],
+        data: [1000, 5000, 4200, 9000, 6000, 16000, 15000, 5000, 4200, 10000, 6000, 13000],
         borderColor: '#0073cf',
         backgroundColor: 'rgba(0, 115, 207, 0.2)',
         fill: true,
@@ -19,9 +19,9 @@ const YearlySalesChart = () => {
       },
       {
         label: '2022',
-        data: [2000, 3000, 4000, 3500, 6000, 5000, 6000, 7000, 8000, 10000, 12000, 10000],
-        borderColor: '#66BB6A',
-        backgroundColor: 'rgba(102, 187, 106, 0.2)',
+        data: [0, 2000, 3000, 7800, 4000, 13000, 12000, 3000, 2400, 8000, 5000, 10000],
+        borderColor: '#E0EFFE',
+        backgroundColor: '#B9DFFE',
         fill: true,
         tension: 0.4, // Smooth curves for the line
       },
@@ -29,14 +29,14 @@ const YearlySalesChart = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 h-[300px]">
+    <div className="bg-white rounded-lg shadow-md  p-2 h-[234px]">
       <div className="flex justify-between items-center">
         <h2 className="text-lg font-semibold text-gray-700">Yearly Sales</h2>
         <button>
           <HiOutlineDotsHorizontal className="hover:bg-gray-200 rounded-full p-2" />
         </button>
       </div>
-      <div className="mt-4 h-[200px]">
+      <div className="mt-4 h-[170px]">
         <Line data={data} options={{
           maintainAspectRatio: false,
           responsive: true,

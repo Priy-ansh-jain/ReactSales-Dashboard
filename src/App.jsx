@@ -7,12 +7,11 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "./components/ui/tooltip";
-import { Navbar, Footer, Sidebar, Chart, Chat } from "./pages/components";
+import { Navbar, Sidebar, Chat } from "./pages/components";
 import {
   Ecommerce,
   Email,
   Contacts,
-  Pricing,
   Calendar,
   TreeView,
   SettingsPage,

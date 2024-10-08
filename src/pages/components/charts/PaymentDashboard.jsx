@@ -16,7 +16,7 @@ const PaymentDashboard = () => {
   ];
 
   const toggleTransactions = () => {
-    setShowTransactions(prevState => !prevState);
+    setShowTransactions((prevState) => !prevState);
   };
 
   useEffect(() => {
@@ -35,14 +35,17 @@ const PaymentDashboard = () => {
   }, []);
 
   return (
-    <div className="p-2 h-full flex flex-col justify-between">
+    <div className="p-1 h-full flex flex-col">
       {/* Payment Gateways Section */}
       {!showTransactions && (
-        <div className="bg-white rounded-lg shadow-md p-4 mb-4 h-[220px] overflow-auto">
+        <div className="bg-white rounded-lg shadow-md p-4 mb-4 h-[200px] overflow-auto scrollbar-thin">
           <h2 className="text-lg font-semibold mb-2">Payment Gateways</h2>
           <div className="mt-2">
             {paymentGateways.map((gateway, index) => (
-              <div key={index} className="flex items-center justify-between p-2 border-b border-gray-200 hover:bg-gray-100 transition duration-200">
+              <div
+                key={index}
+                className="flex items-center justify-between p-2 border-b border-gray-200 hover:bg-gray-100 transition duration-200"
+              >
                 <div className="flex items-center">
                   <div className="text-2xl mr-3">{gateway.icon}</div>
                   <span className="font-medium text-gray-800">{gateway.name}</span>
@@ -55,7 +58,10 @@ const PaymentDashboard = () => {
               <div>
                 <h3 className="font-semibold mt-4">Cryptocurrency Prices:</h3>
                 {Object.keys(cryptoPrices).map((key, index) => (
-                  <div key={index} className="flex items-center justify-between p-2 border-b border-gray-200 hover:bg-gray-100 transition duration-200">
+                  <div
+                    key={index}
+                    className="flex items-center justify-between p-2 border-b border-gray-200 hover:bg-gray-100 transition duration-200"
+                  >
                     <span className="font-medium text-gray-800 capitalize">{key}</span>
                     <span className="font-semibold text-gray-700">${cryptoPrices[key].usd}</span>
                   </div>
@@ -65,24 +71,34 @@ const PaymentDashboard = () => {
           </div>
         </div>
       )}
-
-      {/* Button to toggle Recent Transactions */}
       <button
         onClick={toggleTransactions}
-        className="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-200"
+        className="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-200 z-10"
       >
         {showTransactions ? 'Hide Transactions' : 'Show Transactions'}
       </button>
+      {/* Button to toggle Recent Transactions */}
 
-      {/* Recent Transactions Section (Add your transactions data here) */}
+      {/* Recent Transactions Section */}
       {showTransactions && (
-        <div className="bg-white rounded-lg shadow-md p-2 mt-4 h-[220px] overflow-auto">
+        <div className="bg-white rounded-lg shadow-md mt-4 h-[180px] p-2 overflow-auto scrollbar-thin">
           <h2 className="text-lg font-semibold mb-2">Recent Transactions</h2>
           <div>
             {recentTransactions.map((transaction, index) => (
-              <div key={index} className="flex items-center justify-between p-2 border-b border-gray-200 hover:bg-gray-100 transition duration-200">
+              <div
+                key={index}
+                className="flex items-center justify-between p-2 border-b border-gray-200 hover:bg-gray-100 transition duration-200"
+              >
                 <div className="flex items-center">
-                  <div className="text-2xl" style={{ color: transaction.iconColor, backgroundColor: transaction.iconBg, borderRadius: '50%', padding: '8px' }}>
+                  <div
+                    className="text-2xl"
+                    style={{
+                      color: transaction.iconColor,
+                      backgroundColor: transaction.iconBg,
+                      borderRadius: '50%',
+                      padding: '8px',
+                    }}
+                  >
                     {transaction.icon}
                   </div>
                   <div className="ml-3">
@@ -90,7 +106,10 @@ const PaymentDashboard = () => {
                     <p className="text-gray-600">{transaction.desc}</p>
                   </div>
                 </div>
-                <span className={`font-semibold text-gray-700 ${transaction.amount.startsWith('-') ? 'text-red-600' : 'text-green-600'}`}>
+                <span
+                  className={`font-semibold text-gray-700 ${transaction.amount.startsWith('-') ? 'text-red-600' : 'text-green-600'
+                    }`}
+                >
                   {transaction.amount}
                 </span>
                 {transaction.percentage && (
