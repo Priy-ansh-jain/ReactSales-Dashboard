@@ -1,8 +1,7 @@
 # React + Vite
+https://chic-marshmallow-dashboard.netlify.app/
 
-https://react-sales-dashobard.netlify.app/
-
-![Screenshot 2024-10-07 182930](https://github.com/user-attachments/assets/9be8f3eb-f38f-494c-b591-84459a230667)
+![Screenshot 2024-10-08 220549](https://github.com/user-attachments/assets/ff0bf638-2e14-4965-a661-6907d57acfbd)
 
 ![Screenshot 2024-10-07 183150](https://github.com/user-attachments/assets/c43d8200-9c0f-4c4d-a4fe-90e2f2d80277)
 
