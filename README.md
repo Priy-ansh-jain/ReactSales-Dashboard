@@ -1,5 +1,20 @@
 # React + Vite
 https://chic-marshmallow-dashboard.netlify.app/
+Frontend (React or Vue.js):
+The dashboard is built using a modern JavaScript framework like React or Vue.js, providing a dynamic and interactive user experience.
+
+UI Framework:
+The dashboard is created using UI frameworks such as Material UI, Tailwind CSS, or ShadCN for responsive, stylish, and easy-to-navigate components. This makes it adaptable to different screen sizes and enhances the UI experience.
+
+Charts and Data Visualization:
+A dashboard typically integrates charting libraries like Chart.js, Recharts, or D3.js to visualize metrics and other data, showing visual insights like sales, active users, revenue distribution, etc.
+
+
+"The data is in json format if want to use somewhere you make it dynmaic with flow, where it comes from and goes and get stored."
+
+
+State Management:
+The project use React Context for managing the global state, making sure data can be passed efficiently between components.
 
 ![Screenshot 2024-10-08 220549](https://github.com/user-attachments/assets/ff0bf638-2e14-4965-a661-6907d57acfbd)
 
