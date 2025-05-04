@@ -10,7 +10,7 @@ Charts and Data Visualization:
 A dashboard typically integrates charting libraries like Chart.js, Recharts, or D3.js to visualize metrics and other data, showing visual insights like sales, active users, revenue distribution, etc.
 
 
-"The data is in json format if want to use somewhere you make it dynmaic with flow, where it comes from and goes and get stored."
+"The data is in json format if anybody want's it to use somewhere you make it dynmaic with proper flow, where it comes from and goes and get stored."
 
 
 State Management:
